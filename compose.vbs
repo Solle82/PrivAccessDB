@@ -71,6 +71,8 @@ Function importModulesTxt(sADPFilename, sImportpath)
         fso.CopyFile sADPFilename, sADPFilename & ".bak"
     end if
 
+    Err.Raise 52, null, "TEST"
+
     fso.CopyFile sStubADPFilename, sADPFilename
 
     ' launch MSAccess

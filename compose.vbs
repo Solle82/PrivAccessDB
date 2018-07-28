@@ -125,7 +125,7 @@ Public Function getErr()
     getErr = strError
 End Function
 
-private function QuitError(code as int, msg as string)
+private function QuitError(code, msg)
     
     Err.Raise code, "Compose.Database", msg
 

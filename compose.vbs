@@ -127,7 +127,7 @@ End Function
 
 private function QuitError(code, msg)
     
-    Err.Raise code, "Compose.Database", msg
+    WScript.Echo "Error #"& code &" - "& msg
 
     WScript.Quit(code)
 end function

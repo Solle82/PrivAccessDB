@@ -71,7 +71,7 @@ Function importModulesTxt(sADPFilename, sImportpath)
         fso.CopyFile sADPFilename, sADPFilename & ".bak"
     end if
 
-    Err.Raise 52, null, "TEST"
+    Err.Raise 52
 
     fso.CopyFile sStubADPFilename, sADPFilename
 

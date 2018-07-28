@@ -50,7 +50,7 @@ Function importModulesTxt(sADPFilename, sImportpath)
     ' Build file and pathnames
     dim myType, myName, myPath, sStubADPFilename
     myType = fso.GetExtensionName(sADPFilename)
-    myName = fso.GetBaseName(sADPFilename)
+    myName = "Database"'fso.GetBaseName(sADPFilename)
     myPath = fso.GetParentFolderName(sADPFilename)
 
     ' if no path was given as argument, use a relative directory

@@ -18,7 +18,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 
 dim sADPFilename
 If (WScript.Arguments.Count = 0) then
-    MsgBox "Bitte den Dateinamen angeben!", vbExclamation, "Error"
+    MsgBox "Please provide a filename!", vbExclamation, "Error"
     Wscript.Quit()
 End if
 sADPFilename = fso.GetAbsolutePathName(WScript.Arguments(0))
@@ -46,7 +46,7 @@ Function exportModulesTxt(sADPFilename, sExportpath)
 
     dim myType, myName, myPath, sStubADPFilename
     myType = fso.GetExtensionName(sADPFilename)
-    myName = fso.GetBaseName(sADPFilename)
+    myName = "Database"'fso.GetBaseName(sADPFilename)
     myPath = fso.GetParentFolderName(sADPFilename)
 
     If (sExportpath = "") then

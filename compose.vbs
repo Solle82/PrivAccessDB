@@ -71,7 +71,7 @@ Function importModulesTxt(sADPFilename, sImportpath)
         fso.CopyFile sADPFilename, sADPFilename & ".bak"
     end if
 
-    Err.Raise 53, "Compose.script", "The files is gone."
+    WScript.Quit(53)
 
     fso.CopyFile sStubADPFilename, sADPFilename
 

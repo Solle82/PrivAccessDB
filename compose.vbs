@@ -67,11 +67,14 @@ Function importModulesTxt(sADPFilename, sImportpath)
 '        if (sInput <> "y") Then
 '            WScript.Quit
 '        end if
+        WScript.Echo "Backing up existing database..."
 
         fso.CopyFile sADPFilename, sADPFilename & ".bak"
     end if
 
-    WScript.Quit(53)
+    if (not fso.FileExists(sADPFilename)) Then
+        QuitError(53, "Database stub does not exist.")
+    end if
 
     fso.CopyFile sStubADPFilename, sADPFilename
 
@@ -121,3 +124,10 @@ Public Function getErr()
                "    Code: " & Err.Number & vbCrLf
     getErr = strError
 End Function
+
+private function QuitError(code as int, msg as string)
+    
+    Err.Raise code, "Compose.Database", msg
+
+    WScript.Quit(code)
+end function

@@ -72,48 +72,50 @@ Function importModulesTxt(sADPFilename, sImportpath)
         fso.CopyFile sADPFilename, sADPFilename & ".bak"
     end if
 
-    if (not fso.FileExists(sADPFilename)) Then
-        QuitError 53, "Database stub does not exist."
+    if (not fso.FileExists(sStubADPFilename)) Then
+        QuitError 53, "Database stub ("& sStubADPFilename &") does not exist."
+    else
+        fso.CopyFile sStubADPFilename, sADPFilename
+
+        ' launch MSAccess
+        WScript.Echo "starting Access..."
+        Dim oApplication
+        Set oApplication = CreateObject("Access.Application")
+        WScript.Echo "opening " & sADPFilename & " ..."
+        If (Right(sStubADPFilename,4) = ".adp") Then
+            oApplication.OpenAccessProject sADPFilename
+        Else
+            oApplication.OpenCurrentDatabase sADPFilename
+        End If
+        oApplication.Visible = false
+
+        Dim folder
+        Set folder = fso.GetFolder(sImportpath)
+
+        ' load each file from the import path into the stub
+        Dim myFile, objectname, objecttype
+        for each myFile in folder.Files
+            objecttype = fso.GetExtensionName(myFile.Name)
+            objectname = fso.GetBaseName(myFile.Name)
+            WScript.Echo "  " & objectname & " (" & objecttype & ")"
+
+            if (objecttype = "form") then
+                oApplication.LoadFromText acForm, objectname, myFile.Path
+            elseif (objecttype = "bas") then
+                oApplication.LoadFromText acModule, objectname, myFile.Path
+            elseif (objecttype = "mac") then
+                oApplication.LoadFromText acMacro, objectname, myFile.Path
+            elseif (objecttype = "report") then
+                oApplication.LoadFromText acReport, objectname, myFile.Path
+            end if
+
+        next
+
+        oApplication.RunCommand acCmdCompileAndSaveAllModules
+        oApplication.Quit
+
     end if
 
-    fso.CopyFile sStubADPFilename, sADPFilename
-
-    ' launch MSAccess
-    WScript.Echo "starting Access..."
-    Dim oApplication
-    Set oApplication = CreateObject("Access.Application")
-    WScript.Echo "opening " & sADPFilename & " ..."
-    If (Right(sStubADPFilename,4) = ".adp") Then
-        oApplication.OpenAccessProject sADPFilename
-    Else
-        oApplication.OpenCurrentDatabase sADPFilename
-    End If
-    oApplication.Visible = false
-
-    Dim folder
-    Set folder = fso.GetFolder(sImportpath)
-
-    ' load each file from the import path into the stub
-    Dim myFile, objectname, objecttype
-    for each myFile in folder.Files
-        objecttype = fso.GetExtensionName(myFile.Name)
-        objectname = fso.GetBaseName(myFile.Name)
-        WScript.Echo "  " & objectname & " (" & objecttype & ")"
-
-        if (objecttype = "form") then
-            oApplication.LoadFromText acForm, objectname, myFile.Path
-        elseif (objecttype = "bas") then
-            oApplication.LoadFromText acModule, objectname, myFile.Path
-        elseif (objecttype = "mac") then
-            oApplication.LoadFromText acMacro, objectname, myFile.Path
-        elseif (objecttype = "report") then
-            oApplication.LoadFromText acReport, objectname, myFile.Path
-        end if
-
-    next
-
-    oApplication.RunCommand acCmdCompileAndSaveAllModules
-    oApplication.Quit
 End Function
 
 Public Function getErr()

@@ -73,7 +73,7 @@ Function importModulesTxt(sADPFilename, sImportpath)
     end if
 
     if (not fso.FileExists(sADPFilename)) Then
-        QuitError(53, "Database stub does not exist.")
+        QuitError 53, "Database stub does not exist."
     end if
 
     fso.CopyFile sStubADPFilename, sADPFilename

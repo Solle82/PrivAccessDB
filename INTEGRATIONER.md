@@ -3,12 +3,18 @@ Regular text
 
   ## 1.1 Virusscan
   Scanner indkommende blanketter for virus efter de er gemt i databasen. Grundet vedhæftninger gemmes i databasen i base64 format, er der ingen risici for at disse inficerer serveren.
+  Integrationen er synkron, hvilket betyder at denne integration skal gennemføres, før andre integrationer kan udføres.
   ## 1.2 SKAT
+  Transformere og validerer indkommende blanketter i SKAT's XML format (begrebsmodel).
+  Integrationen er synkron, hvilket betyder at denne integration skal gennemføres, før andre integrationer kan udføres.
   ## 1.3 Kundeoverblik (KOB)
+  Transformerer blankettens SKAT XML til KOB's XML format, og sender resultatet til KOB endepunktet.
   ## 1.4 Datawarehouse (DWH)
+  Transformerer blankettens SKAT XML til DWH's XML format, hvor XML-filen uploades til en FTP-server - skiftes til SFTP. Herefter sendes en anmodning til DWH endepunktet der påbegynder protokollen "Styret Fil Overførsel". Når DWH melder tilbage til Blanketfordeleren, slettes filerne fra FTP-serveren igen, og integrationen markeres som udført.
   ## 1.5 Captia (CAP)
+  Transformerer blankettens SKAT XML til Captia-XML som sendes til en JAVA komponent. Denne komponent kommunikerer med Captia SOAP-webservicen for sagsoprettelse i Workzone.
 
-
+.
 
 # 2. Blanketter
 ## 2.1 tst.01

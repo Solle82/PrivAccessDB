@@ -2,6 +2,7 @@
 Regular text
 
   ## 1.1 Virusscan
+  Scanner indkommende blanketter for virus efter de er gemt i databasen. Grundet vedhæftninger gemmes i databasen i base64 format, er der ingen risici for at disse inficerer serveren.
   ## 1.2 SKAT
   ## 1.3 Kundeoverblik (KOB)
   ## 1.4 Datawarehouse (DWH)

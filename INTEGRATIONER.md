@@ -14,17 +14,21 @@ Regular text
 ### 2.1.1 Formål og integrationer
 ### 2.1.2 Tilpasninger
 
+
 ## 2.2 04.063
 ### 2.2.1 Formål og integrationer
 ### 2.2.2 Tilpasninger
+
 
 ## 2.3 06.013
 ### 2.3.1 Formål og integrationer
 ### 2.3.2 Tilpasninger
 
+
 ## 2.4 Statsstøtte
 ### 2.4.1 Formål og integrationer
 ### 2.4.2 Tilpasninger
+
 
 ## 2.5 Moms20
 ### 2.5.1 Formål og integrationer

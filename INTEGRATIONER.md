@@ -10,7 +10,7 @@ Regular text
 if (display == code){
   return true
 }
-``
+```
 
 #### Header 4
 

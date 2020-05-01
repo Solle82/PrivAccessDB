@@ -6,6 +6,8 @@ Regular text
 > - Quoted list item
 
 ### Header 3
+`var inline_code = true`
+
 ```
 if (display == code){
   return true

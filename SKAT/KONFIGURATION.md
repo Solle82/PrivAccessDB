@@ -17,11 +17,11 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 
 ### Fejlrapportering
 #### ITSM
-4. I træstrukturen, gå til *All Projects -> FejlrapporteringsFlow -> Behandl -> FejlrapporteringITSM*
-	5. Klik på *Transport* fanen
-	6. Tilret URLs, således at den URL der står der, peger på Remedy ITSM i det miljø du installerer i. URLer:  
-		- Remedy ITSM produktion http://172.20.248.41:6024/arsys/services/ARService?server=rdybrokerprod01&webService=Skat_Vendor_ITSM_Integration
-		- Remedy ITSM test http://172.20.248.40:6024/arsys/services/ARService?server=rdybrokertest01&webService=Skat_Vendor_ITSM_Integration
+- I træstrukturen, gå til *All Projects -> FejlrapporteringsFlow -> Behandl -> FejlrapporteringITSM*
+- Klik på *Transport* fanen
+- Tilret URLs, således at den URL der står der, peger på Remedy ITSM i det miljø du installerer i. URLer:  
+  - Remedy ITSM produktion http://172.20.248.41:6024/arsys/services/ARService?server=rdybrokerprod01&webService=Skat_Vendor_ITSM_Integration
+  - Remedy ITSM test http://172.20.248.40:6024/arsys/services/ARService?server=rdybrokertest01&webService=Skat_Vendor_ITSM_Integration
 
 #### AdminSite
 - Gå til  *All Projects -> FejlrapporteringsFlow -> Resources -> FejlrapporteringDomainValues*

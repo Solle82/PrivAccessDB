@@ -34,13 +34,12 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 
   - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
 		
-		
 ### Integration: Kundeoverblik
 - I træstrukturen, gå til *All Projects -> KundeoverblikIntegration -> Behandl -> Kundeoverblik*
-  - Klik på *Transport* fanen
-  - Tilret URLs, således at den URL der står der, peger på Kunderoverblik i det miljø du installerer i. URLer:  
-    - Kunderoverblik produktion http://172.20.251.129:8081/arsys01/services/ARService?server=kob-prod&webService=KOB_Blanket
-    - Kunderoverblik test http://172.20.250.211:8080/arsys/services/ARService?server=kob-test&webService=KOB_Blanket
+- Klik på *Transport* fanen
+- Tilret URLs, således at den URL der står der, peger på Kunderoverblik i det miljø du installerer i. URLer:  
+  - Kunderoverblik produktion http://172.20.251.129:8081/arsys01/services/ARService?server=kob-prod&webService=KOB_Blanket
+  - Kunderoverblik test http://172.20.250.211:8080/arsys/services/ARService?server=kob-test&webService=KOB_Blanket
 
 ### Integration: Datawarehouse
 #### Styret FilOverførsel

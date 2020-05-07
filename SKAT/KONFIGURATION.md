@@ -32,7 +32,7 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
   - URL TFE:   https://bf-adminsite.tfe.ccta.dk
   - URL PROD:  https://bf-adminsite.ccta.dk
 
-  - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
+  **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
 		
 ### Integration: Kundeoverblik
 - I træstrukturen, gå til *All Projects -> KundeoverblikIntegration -> Behandl -> Kundeoverblik*

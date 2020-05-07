@@ -52,15 +52,15 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 #### FTP (Almindelig)
 - I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Resources -> DatawarehouseDomainValues*
 - Tilret værdierne ud fra det miljø der arbejdes på.
-  *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
+  - *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 
 #### SFTP (Private/Public key)
 - I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Resources -> DatawarehouseSFTP*
-  *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
+  - *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 
 ### Integration: Captia/Workzone
 - I træstrukturen, gå til *All Projects -> CaptiaIntegration -> Resources -> CaptiaDomainValues*
-  *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
+  - *Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 		
 		
 		

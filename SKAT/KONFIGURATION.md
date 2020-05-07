@@ -6,7 +6,7 @@
 1. Gå til Service Bus Consollen: http://\<HOSTNAME\>:7001/servicebus/
 2. Klik på *Create* for at starte en ny "Session"
 3. Udfør ændringerne.
-4. Tryk på *Close*
+4. Tryk på *Activate* knappen i *Confirm Session Activation*
 
 ### Generel Miljø konfiguration
 For at sikre servicebussen benytter de korrekte værdier, skal det sikres at servicebussen afspejler det miljø som den kører på.
@@ -16,7 +16,7 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
   - **Environment (under DomainValue) sættes til en af disse værdier (TST / SIT / TFE / PRD)** 
 
 ### Fejlrapportering
-#### ITSM
+#### Remedy ITSM
 - I træstrukturen, gå til *All Projects -> FejlrapporteringsFlow -> Behandl -> FejlrapporteringITSM*
 - Klik på *Transport* fanen
 - Tilret URLs, således at den URL der står der, peger på Remedy ITSM i det miljø du installerer i. URLer:  
@@ -27,34 +27,23 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 - Gå til  *All Projects -> FejlrapporteringsFlow -> Resources -> FejlrapporteringDomainValues*
 - Tilpas domain specifikke værdier i tabellen: 
   - **AdminSiteURLer**    	
-  - Url TST:   https://bf-adminsite.tst.ccta.dk
-  - Url SIT:   https://bf-adminsite.sit.ccta.dk
+  - URL TST:   https://bf-adminsite.tst.ccta.dk
+  - URL SIT:   https://bf-adminsite.sit.ccta.dk
   - URL TFE:   https://bf-adminsite.tfe.ccta.dk
-  - Url PROD:  https://bf-adminsite.ccta.dk
+  - URL PROD:  https://bf-adminsite.ccta.dk
 
   - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-Nu skal der tilrettes til miljøet:
-
+### Integration: Kundeoverblik
 1. I træstrukturen, gå til *All Projects -> KundeoverblikIntegration -> Behandl -> Kundeoverblik*
 	2. Klik på *Transport* fanen
 	3. Tilret URLs, således at den URL der står der, peger på Kunderoverblik i det miljø du installerer i. URLer:  
 		- Kunderoverblik produktion http://172.20.251.129:8081/arsys01/services/ARService?server=kob-prod&webService=KOB_Blanket
 		- Kunderoverblik test http://172.20.250.211:8080/arsys/services/ARService?server=kob-test&webService=KOB_Blanket
 
+### Integration: Datawarehouse
+#### Styret FilOverførsel
 7. I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Behandl -> StyretFilOverfoerselModtagAnmod*
 	8. Klik på *Transport* fanen
 	9. Tilret URIs, således at den URL der står der, peger på DW i det miljø du installerer i. URLer:  
@@ -62,10 +51,18 @@ Nu skal der tilrettes til miljøet:
 		- DW TFE:   http://172.20.242.127:7333/StyretFiloverfoerselModtagAnmodService
 	 
      - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD)**
-   
-12. Gå til  *All Projects -> IntegrationsRessourser  -> Resources -> Environment*
-13. Tilpas domain specifik værdi i tabellen: 
-    
-      - **Environment (under DomainValue) sættes til en af disse værdier (TST / SIT / TFE / PRD)** 
-   
-14. Afslut import og tilrettelser ved at trykke på *Activate* knappen og efterfølgende på *Activate* knappen i *Confirm Session Activation*
+
+#### FTP (Almindelig)
+
+#### SFTP (Private/Public key)
+
+
+### Integration: Captia/Workzone
+		
+		
+		
+		
+		
+		
+		
+	

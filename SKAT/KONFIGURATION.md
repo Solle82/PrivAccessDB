@@ -13,7 +13,7 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 
 - Gå til  *All Projects -> IntegrationsRessourser -> Resources -> Environment*
 - Tilpas domain specifik værdi i tabellen: 
-      - **Environment (under DomainValue) sættes til en af disse værdier (TST / SIT / TFE / PRD)** 
+  - **Environment (under DomainValue) sættes til en af disse værdier (TST / SIT / TFE / PRD)** 
 
 ### Fejlrapportering
 #### ITSM

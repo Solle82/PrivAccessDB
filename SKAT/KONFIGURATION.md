@@ -36,29 +36,32 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 		
 		
 ### Integration: Kundeoverblik
-1. I træstrukturen, gå til *All Projects -> KundeoverblikIntegration -> Behandl -> Kundeoverblik*
-	2. Klik på *Transport* fanen
-	3. Tilret URLs, således at den URL der står der, peger på Kunderoverblik i det miljø du installerer i. URLer:  
-		- Kunderoverblik produktion http://172.20.251.129:8081/arsys01/services/ARService?server=kob-prod&webService=KOB_Blanket
-		- Kunderoverblik test http://172.20.250.211:8080/arsys/services/ARService?server=kob-test&webService=KOB_Blanket
+- I træstrukturen, gå til *All Projects -> KundeoverblikIntegration -> Behandl -> Kundeoverblik*
+  - Klik på *Transport* fanen
+  - Tilret URLs, således at den URL der står der, peger på Kunderoverblik i det miljø du installerer i. URLer:  
+    - Kunderoverblik produktion http://172.20.251.129:8081/arsys01/services/ARService?server=kob-prod&webService=KOB_Blanket
+    - Kunderoverblik test http://172.20.250.211:8080/arsys/services/ARService?server=kob-test&webService=KOB_Blanket
 
 ### Integration: Datawarehouse
 #### Styret FilOverførsel
-7. I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Behandl -> StyretFilOverfoerselModtagAnmod*
-	8. Klik på *Transport* fanen
-	9. Tilret URIs, således at den URL der står der, peger på DW i det miljø du installerer i. URLer:  
-		- DW PROD:  http://172.20.242.43:7333/StyretFiloverfoerselModtagAnmodService
-		- DW TFE:   http://172.20.242.127:7333/StyretFiloverfoerselModtagAnmodService
-	 
-     - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD)**
+- I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Behandl -> StyretFilOverfoerselModtagAnmod*
+- Klik på *Transport* fanen
+- Tilret URIs, således at den URL der står der, peger på DW i det miljø du installerer i. URLer:  
+  - DW PROD:  http://172.20.242.43:7333/StyretFiloverfoerselModtagAnmodService
+  - DW TFE:   http://172.20.242.127:7333/StyretFiloverfoerselModtagAnmodService
 
 #### FTP (Almindelig)
+- I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Resources -> DatawarehouseDomainValues*
+- Tilret værdierne ud fra det miljø der arbejdes på. 
+*Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 
 #### SFTP (Private/Public key)
-
+- I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Resources -> DatawarehouseSFTP*
+*Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 
 ### Integration: Captia/Workzone
-		
+- I træstrukturen, gå til *All Projects -> Datawarehouseintegration -> Resources -> DatawarehouseSFTP*
+*Første kolonne "Environment", skal ikke tilrettes, da de angiver de miljøer opsætningen er gældende for.*
 		
 		
 		

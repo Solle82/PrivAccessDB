@@ -24,15 +24,25 @@ For at sikre servicebussen benytter de korrekte værdier, skal det sikres at ser
 		- Remedy ITSM test http://172.20.248.40:6024/arsys/services/ARService?server=rdybrokertest01&webService=Skat_Vendor_ITSM_Integration
 
 #### AdminSite
-10. Gå til  *All Projects -> FejlrapporteringsFlow -> Resources -> FejlrapporteringDomainValues*
-	11. Tilpas domain specifikke værdier i tabellen: 
-		 - **AdminSiteURLer**    	
-		 - Url TST:   https://bf-adminsite.tst.ccta.dk
-		 - Url SIT:   https://bf-adminsite.sit.ccta.dk
-		 - URL TFE:   https://bf-adminsite.tfe.ccta.dk
-		 - Url PROD:  https://bf-adminsite.ccta.dk
+- Gå til  *All Projects -> FejlrapporteringsFlow -> Resources -> FejlrapporteringDomainValues*
+- Tilpas domain specifikke værdier i tabellen: 
+  - **AdminSiteURLer**    	
+  - Url TST:   https://bf-adminsite.tst.ccta.dk
+  - Url SIT:   https://bf-adminsite.sit.ccta.dk
+  - URL TFE:   https://bf-adminsite.tfe.ccta.dk
+  - Url PROD:  https://bf-adminsite.ccta.dk
 
-		- **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
+  - **Environment sættes til en af disse værdier (TST / SIT / TFE / PRD) og skal matche værdien for Environment under Generel Miljø konfiguration**
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
